@@ -9,7 +9,10 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom -->
     <link href="css/smday.css" rel="stylesheet">
+    <!-- twitter -->
+    <link rel="canonical" href="https://dev.twitter.com/web/tweet-button">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,7 +21,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="no-scroll">
+      
+      <div class="loader-bg">
+          <img src="img/social_media_logo.png" alt="">
+      </div>
       
       <div class="bg-main"> 
           <div class="container">
@@ -55,7 +62,9 @@
                  <img class="control-img-2" src="img/twitter_controls_2.png">
                  <div style="clear : both"></div>
              </div>
+             
          </div>
+         
          
          <div class="row steps">
             <div class="col-md-4">
@@ -64,7 +73,7 @@
             </div>
             <div  class="col-md-4">
                 <img src="img/icon2.png" alt="">
-                <p>Appreciate a friend who's done a good deed</p>
+                <p>Appreciate a friend who's done a good deed</p><a class="twitter-share-button" href="https://twitter.com/intent/tweet"  data-text="#iAppreciate " data-url=" ">Tweet</a>
             </div>
             <div class="col-md-4">
                 <img src="img/icon3.png" alt="">
@@ -79,11 +88,12 @@
           <div class="container">
             <div class="col-md-6 twitter-feed">
                 <a class="twitter-timeline"  href="https://twitter.com/hashtag/iAppreciate" data-widget-id="747303997480919040">#iAppreciate Tweets</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+               
              </div>
              <div class="col-md-6 twitter-feed-text">
                  <p>We’ve seen that Social Media has the power to connect people who want to give back to others. </p>
                  <h3>Start appreciating with #IAppreciate!</h3>
+                 <p class="twitter-share-large"><a class="twitter-share-button twitter-share" href="https://twitter.com/intent/tweet"  data-text="#iAppreciate " data-url=" "  data-size="large">Tweet</a></p>
              </div>
         </div>
       </div>
@@ -92,63 +102,18 @@
           <p>Powered By <img src="img/99xt_logo.png" alt=""></p>
       </div>-->
     
-    
-
-    
-    
-    
-    
-    
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- twitter -->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <!--count up-->
+    <!-- count up -->
     <script src="js/countUp.min.js"></script>
-    <!--type animation-->
+    <!-- type animation -->
     <script src="js/typed.min.js"></script>
-    <script>
-        
-        
-        
-    $(function(){
-        
-        
-        var options = {
-          useEasing : true, 
-          useGrouping : true, 
-          separator : ',', 
-          decimal : '.', 
-          prefix : '', 
-          suffix : '' 
-        };
-        
-        var demo = new CountUp("animate-count", 0, 320, 0, 2.5, options);
-        demo.start();
-        
-        $(window).scroll(function(e){
-             if($(this).scrollTop()>300){
-                    $(".twitter-textbox-text").typed({
-                        strings: ["I like to Appreciate", "<b>#IAppreciate</b> Harindu's awesome work^500 with flood relief through Red Cross^600 - nominating <b>@Achini^600, @Prasanna^250, @Charana^500</b> to keep appreciating!^600 <b>:)</b>"],
-                        typeSpeed: 0.4,
-                        contentType: 'html'
-                    });
-             }
-        });
-        
-        
-        
-        
-       
-        
-    });
-
-        
-        
-        
-    </script>
-    
+    <!-- custom -->
+    <script src="js/smday.js"></script>
     
   </body>
 </html>

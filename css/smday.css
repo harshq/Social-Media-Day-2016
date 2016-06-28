@@ -8,6 +8,18 @@ body , html {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
+.loader-bg{
+    width : 100%; position : absolute ; height : 100vh; background : #4DB0EB; z-index : 10000;
+}
+
+.no-scroll{
+     overflow: hidden;
+}
+
+.loader-bg img{
+    display : block; margin : 40vh auto;
+}
+
 .bg-main {
      background-image : url('/img/bg_image.jpg');
      background-repeat: no-repeat; 
@@ -185,6 +197,8 @@ body , html {
     width : 100%; 
     background : #69f0ae;
     margin: 0;
+    margin-bottom: 50px;
+    padding-bottom : 75px;
 }
 
 .twitter-feed{
@@ -226,6 +240,10 @@ body , html {
     color : #29303a;
 }
 
+.twitter-share-button{
+    margin-top: 15px;
+}
+
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
@@ -248,6 +266,21 @@ body , html {
     100% { opacity:1; }
 }
 
+.loader-animate{
+    -webkit-animation: fade 0.7s linear;
+    -moz-animation: fade 0.7s linear;
+    animation: fade 0.7s linear;
+}
+@keyframes fade{
+    0% { opacity:1; }
+    100% { opacity:0; display: none; }
+}
+@-webkit-keyframes fade{
+    0% { opacity:1; }
+    100% { opacity:0; display: none; }
+}
+
+
 
 
 /* Large Devices, Wide Screens */
@@ -257,6 +290,13 @@ body , html {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .steps div{
+        padding-bottom : 25px;
+    }
+    
+    .twitter-share-large{
+        text-align: center;
+    }
     
 }
 
@@ -291,9 +331,7 @@ body , html {
         width: 100%!important;
     }
     
-    .steps .col-md-4{
-        padding-bottom : 15px;
-    }
+    
     
 }
 
