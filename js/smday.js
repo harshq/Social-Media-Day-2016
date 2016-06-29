@@ -20,16 +20,15 @@
             demo.start();  
         });
         
-        setTimeout(function(){
-            $('.loader-bg').fadeOut("slow");
-            
+        $('<img/>').attr('src', 'http://iappreciate.lk/img/bg_image.jpg').load(function() {
+           $(this).remove();
+           $('.bg-main').css('background-image', 'url(http://iappreciate.lk/img/bg_image.jpg)');
+           $('.loader-bg').fadeOut("slow");
             setTimeout(function () {
                 $('body').removeClass('no-scroll');   
-            }, 500);
-             
-        }, 500);
-        
-       
+            }, 500); 
+        });
+
         $(window).scroll(function(e){
              if($(this).scrollTop()>300){
                     $(".twitter-textbox-text").typed({
@@ -39,7 +38,6 @@
                     });
              }
         });
- 
     });
   
   })(jQuery);
