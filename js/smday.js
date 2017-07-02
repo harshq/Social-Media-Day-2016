@@ -20,9 +20,9 @@
             
             
             
-            $('<img/>').attr('src', 'http://iappreciate.lk/img/bg_image.jpg').load(function() {
+            $('<img/>').attr('src', './img/bg_image.jpg').load(function() {
             $(this).remove();
-            $('.bg-main').css('background-image', 'url(http://iappreciate.lk/img/bg_image.jpg)');
+            $('.bg-main').css('background-image', 'url(./img/bg_image.jpg)');
             $('.loader-bg').fadeOut("slow");
                 setTimeout(function () {
                     demo.start();  
